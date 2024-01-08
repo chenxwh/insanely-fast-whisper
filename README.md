@@ -1,3 +1,12 @@
+[Run it now, on replicate.com](https://replicate.com/turian/insanely-fast-whisper-with-video)
+
+# What We've Done Here
+
+* Cleaned up the code from [chenxwh/insanely-fast-whisper](https://github.com/chenxwh/insanely-fast-whisper) so that we can easily install later pypi versions of [insanely-fast-whisper](https://pypi.org/project/insanely-fast-whisper/).
+* Added option to download and transcribe (or translate) videos using [yt-dlp](https://github.com/yt-dlp/yt-dlp), using code from [adidoes/cog-whisperx-video-transcribe](https://github.com/adidoes/cog-whisperx-video-transcribe)
+
+<hr class="dashed">
+
 # Insanely Fast Whisper
 
 An opinionated CLI to transcribe Audio files w/ Whisper on-device! Powered by 🤗 *Transformers*, *Optimum* & *flash-attn*

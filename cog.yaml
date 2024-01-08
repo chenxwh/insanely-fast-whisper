@@ -17,8 +17,14 @@ build:
     - "optimum==1.14.0"
     - "pyannote-audio==3.1.0"
     - "rich==13.7.0"
+    - pipx
+    - yt-dlp
   run: 
-    - pip install packaging
-    - pip install flash-attn --no-build-isolation
+    # Install commands from the insanely-fast-whisper README
+    # and https://github.com/Vaibhavs10/insanely-fast-whisper/issues/133
+    - pipx install insanely-fast-whisper==0.0.13 --force --pip-args="--ignore-requires-python"
+    - pipx runpip insanely-fast-whisper install wheel
+    - pipx runpip insanely-fast-whisper install flash-attn --no-build-isolation
+
 
 predict: "predict.py:Predictor"
